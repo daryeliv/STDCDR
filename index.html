@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Resultados</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #d32f2f;
+        }
+        canvas {
+            margin: 20px 0;
+        }
+    </style>
+
+    <!-- Bibliotecas -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Control de Resultados</h1>
+        
+        <!-- Gráfico -->
+        <canvas id="resultadoGrafico" width="400" height="200"></canvas>
+
+        <!-- Tabla dinámica -->
+        <table id="tablaResultados" class="display">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Resultado</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Juan Pérez</td><td>85</td><td>2025-01-10</td></tr>
+                <tr><td>María García</td><td>92</td><td>2025-01-12</td></tr>
+                <tr><td>Carlos López</td><td>78</td><td>2025-01-15</td></tr>
+                <tr><td>Ana Torres</td><td>88</td><td>2025-02-05</td></tr>
+                <tr><td>Ricardo Díaz</td><td>95</td><td>2025-02-12</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para inicializar la tabla y el gráfico -->
+    <script>
+        $(document).ready(function() {
+            $('#tablaResultados').DataTable();
+        });
+
+        var ctx = document.getElementById('resultadoGrafico').getContext('2d');
+        var resultadoGrafico = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+                datasets: [{
+                    label: 'Resultados Mensuales',
+                    data: [12, 19, 3, 5, 2],
+                    backgroundColor: 'rgba(211, 47, 47, 0.5)',
+                    borderColor: 'rgba(211, 47, 47, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

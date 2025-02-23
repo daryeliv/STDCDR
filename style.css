@@ -1,0 +1,84 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1212c3;
+    color: #ed1818;
+}
+
+header {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #c2150c7b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #d32f2f;
+}
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart {
+    background-color: #1a32cf;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    background-color: #333;
+    color: #c40808;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
