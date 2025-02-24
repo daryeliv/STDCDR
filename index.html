@@ -38,26 +38,41 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sistema de Control de Resultados</h1>
         
+    <h1>Sistema de Control de Resultados</h1>     
         <!-- Gráfico -->
         <canvas id="resultadoGrafico" width="400" height="200"></canvas>
 
+        <!-- Botones de acción -->
+    <div class="actions" style="text-align: center; margin: 20px 20px;">
+        <button onclick="window.location.href='agregar.html'" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">Agregar Datos</button>
+        <button onclick="window.location.href='eliminar.html'" style="background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">Eliminar Datos</button>
+        <button onclick="window.location.href='modificar.html'" style="background-color: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">Modificar Datos</button>
+    </div>   
         <!-- Tabla dinámica -->
         <table id="tablaResultados" class="display">
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Cédula</th>
                     <th>Resultado</th>
                     <th>Fecha</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Joseph Ramos</td><td>85</td><td>2025-01-10</td></tr>
-                <tr><td>Andrea Raudales</td><td>92</td><td>2025-01-12</td></tr>
-                <tr><td>Sonia Murillo</td><td>78</td><td>2025-01-15</td></tr>
-                <tr><td>Ana Zepeda</td><td>88</td><td>2025-02-05</td></tr>
-                <tr><td>Julio Hernandez</td><td>95</td><td>2025-02-12</td></tr>
+                <tr>
+                    <td>Joseph</td>
+                    <td>0512199904591</td>
+                    <td>60</td>
+                    <td>2025-01-01</td>
+                </tr>
+                <tr>
+                    <td>Ana Zepeda</td>
+                    <td>987654321</td>
+                    <td>45</td>
+                    <td>2025-02-01</td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
             </tbody>
         </table>
     </div>
@@ -75,7 +90,7 @@
                 labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
                 datasets: [{
                     label: 'Resultados Mensuales',
-                    data: [12, 19, 3, 5, 2],
+                    data: [12, 19, 3, 5, 2], // Puedes actualizar esto con datos reales
                     backgroundColor: 'rgba(211, 47, 47, 0.5)',
                     borderColor: 'rgba(211, 47, 47, 1)',
                     borderWidth: 1
@@ -92,3 +107,4 @@
     </script>
 </body>
 </html>
+
