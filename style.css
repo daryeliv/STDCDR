@@ -1,84 +1,163 @@
-/* styles.css */
-
-/* Estilos generales */
+/* Estilo básico para el cuerpo y contenedor */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
-    padding: 0;
-    background-color: #1212c3;
-    color: #ed1818;
+    padding: 20px;
 }
 
-header {
-    background-color: #d32f2f;
-    color: #fff;
-    padding: 1rem 0;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la página */
+h1 {
     text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.agregar {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-bottom: 20px; /* Agrega espacio debajo del botón */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.agregar:hover {
+    background-color: #218838;
 }
 
-nav ul li a {
-    color: #c2150c7b;
-    text-decoration: none;
+/* Botón de mostrar formulario */
+button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el formulario */
+.form-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin: 10px 0 5px;
     font-weight: bold;
 }
 
-main {
-    padding: 20px;
+.form-container input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.dashboard {
+.form-container button {
+    background-color: #007bff;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos de los botones de acción en la tabla */
+a.eliminar, a.modificar {
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+a.eliminar {
+    background-color: #dc3545;
+}
+
+a.eliminar:hover {
+    background-color: #c82333;
+}
+
+a.modificar {
+    background-color: #007bff;
+}
+
+a.modificar:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de los botones de acción */
+.actions {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.card {
+/* Estilo para el contenedor de la gráfica */
+.grafica-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 200px;
-    text-align: center;
-}
-
-.card h2 {
-    margin-top: 0;
-    color: #d32f2f;
-}
-
-.charts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chart {
-    background-color: #1a32cf;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 800px;
-}
-
-footer {
-    background-color: #333;
-    color: #c40808;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
